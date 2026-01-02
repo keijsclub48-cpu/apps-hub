@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* もし画面全体を中央寄せにしたい、背景色を固定したい等の
+   カスタムスタイルが必要な場合のみ、以下に追記します */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
