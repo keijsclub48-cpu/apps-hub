@@ -8,7 +8,8 @@ const MenuPage = () => {
     },
     { 
       name: 'Other App', 
-      url: 'http://localhost:5174', // 実際のURLに合わせて変更してください
+      // url: 'http://localhost:5174', // 実際のURLに合わせて変更してください
+      url: 'https:other-app.vercel.app', // 実際のURLに合わせて変更してください
       desc: 'サブアプリケーション',
       color: 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-200' 
     },
