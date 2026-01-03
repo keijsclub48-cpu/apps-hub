@@ -31,19 +31,19 @@ const MenuPage: React.FC = () => {
     {
       id: 'vocascan',
       name: 'VocaScan',
-      baseUrl: 'https://scan.voca-nical.com',
+      // 本番はドメイン、ローカルは 5173（またはVocaScanのポート）
+      baseUrl: isDev ? 'http://localhost:5175' : 'https://scan.voca-nical.com',
       desc: '音声分析・チューナー',
-      // より深い青（800）に変更し、ホバー時をさらに暗く
       color: 'bg-blue-800 hover:bg-blue-900 shadow-blue-900/40'
     },
-{ 
-    id: 'other',
-    name: 'Other App', 
-    // 本番はVercel URL、ローカルは 5174
-    baseUrl: isDev ? 'http://localhost:5174' : 'https://other-app.vercel.app', 
-    desc: 'サブアプリケーション',
-    color: 'bg-emerald-800 hover:bg-emerald-900 shadow-emerald-900/40' 
-  },
+    {
+      id: 'other',
+      name: 'Other App',
+      // 本番はVercel URL、ローカルは 5174
+      baseUrl: isDev ? 'http://localhost:5174' : 'https://other-app.vercel.app',
+      desc: 'サブアプリケーション',
+      color: 'bg-emerald-800 hover:bg-emerald-900 shadow-emerald-900/40'
+    },
   ];
 
   const handleAppLaunch = (baseUrl: string) => {
