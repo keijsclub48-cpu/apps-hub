@@ -56,23 +56,23 @@ const MenuPage: React.FC = () => {
 
   return (
     <div className="min-h-screen w-full bg-slate-50 flex flex-col items-center justify-center p-6 font-sans">
-<header className="mb-12 text-center relative w-full max-w-3xl">
-  {/* 左上に「LPに戻る」リンクを配置 */}
-  <div className="absolute -top-8 left-0 md:left-4">
-    <a 
-      href={lpUrl}
-      className="flex items-center gap-1 text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors"
-    >
-      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-      </svg>
-      公式サイト (LP) へ戻る
-    </a>
-  </div>
+      <header className="mb-12 text-center relative w-full max-w-3xl">
+        {/* 左上に「LPに戻る」リンクを配置 */}
+        <div className="absolute -top-8 left-0 md:left-4">
+          <a
+            href={lpUrl}
+            className="flex items-center gap-1 text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors"
+          >
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            公式サイト (LP) へ戻る
+          </a>
+        </div>
 
-  <h1 className="text-4xl font-black text-slate-800 mb-2 italic tracking-tighter">Apps Hub</h1>
-  <p className="text-slate-500 text-sm font-medium">測定を開始するアプリを選択してください</p>
-</header>
+        <h1 className="text-4xl font-black text-slate-800 mb-2 italic tracking-tighter">Apps Hub</h1>
+        <p className="text-slate-500 text-sm font-medium">測定を開始するアプリを選択してください</p>
+      </header>
 
       {/* --- ここから差し替え --- */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
