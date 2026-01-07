@@ -59,18 +59,28 @@ const MenuPage: React.FC = () => {
 
   return (
     <div className="min-h-screen w-full bg-[#fafafa] text-[#1a1a1a] flex flex-col items-center justify-center p-6 font-sans antialiased">
-      <header className="mb-16 text-center relative w-full max-w-2xl">
-        <div className="absolute -top-12 left-0 md:left-0">
-          <a href={lpUrl} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#6b8e4e] hover:opacity-70 transition-all">
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
-            </svg>
-            Back to Official
-          </a>
-        </div>
-        <h1 className="text-4xl md:text-5xl font-black tracking-tighter mb-4 text-[#1a1a1a]">Apps Hub</h1>
-        <p className="text-gray-400 text-sm font-bold uppercase tracking-widest">Select Your Tool</p>
-      </header>
+<header className="mb-12 text-center w-full max-w-2xl mx-auto px-4">
+  {/* LPに戻るリンク：絶対配置をやめ、常に上部中央または左寄りに配置 */}
+  <div className="flex justify-center md:justify-start mb-8">
+    <a 
+      href={lpUrl}
+      className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#6b8e4e] hover:opacity-70 transition-all bg-white/50 px-4 py-2 rounded-full border border-gray-100 shadow-sm"
+    >
+      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
+      </svg>
+      Back to Official
+    </a>
+  </div>
+
+  {/* タイトルエリア */}
+  <h1 className="text-4xl md:text-5xl font-black tracking-tighter mb-4 text-[#1a1a1a]">
+    Apps Hub
+  </h1>
+  <p className="text-gray-400 text-sm font-bold uppercase tracking-widest">
+    Select Your Tool
+  </p>
+</header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
         {apps.map((app) => (
